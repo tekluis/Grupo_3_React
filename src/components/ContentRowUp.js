@@ -11,6 +11,7 @@ function ContentRowUp(){
 
     const [users,SetUsers] = useState([]);
     const [products,SetProducts] = useState([]);
+    const [categories,SetCategories] = useState([]);
     const searchInput = useRef()
     
     useEffect(()=>{
@@ -24,10 +25,16 @@ function ContentRowUp(){
     useEffect(()=>{
         fetch("/api/products")
         .then( res => res.json())
-        .then( users => SetProducts(users.meta.count))
+        .then( products => SetProducts(products.meta.count))
         .catch( err => console.log(err))
     },[])
     
+    useEffect(()=>{
+        fetch("/api/products")
+        .then( res => res.json())
+        .then( products => SetCategories(products.meta.categories))
+        .catch( err => console.log(err))
+    },[])
     
     let moviesInDB = {
         title: 'Productos en venta',
@@ -48,9 +55,9 @@ function ContentRowUp(){
     /* <!-- Actors quantity --> */
     
     let actorsQuantity = {
-        title:'Ventas realizadas' ,
+        title:'Cantidad de categorías' ,
         color:'warning',
-        cuantity:'49',
+        cuantity:categories,
         icon:'fa-list'
     }
     

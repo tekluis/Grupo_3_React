@@ -4,6 +4,8 @@ import ContentWrapper from './ContentWrapper';
 import LastProductInDb from './LastProduct';
 import ContentRowUp from './ContentRowUp';
 import ProductsList from './ProductsList';
+import PlantasList from './PlantasList';
+import MacetasList from './MacetasList';
 import UsersList from './UsersList';
 import NotFound from './NotFound';
 import {Link, Route, Switch} from 'react-router-dom';
@@ -54,6 +56,19 @@ function SideBar(){
                         <span>Users List</span></Link>
                 </li>
 
+                {/*<!-- Nav Item - Search -->*/}
+                <li className="nav-item nav-link">
+                <Link className="nav-link" to="/PlantasList">
+                        <i className="fas fa-list"></i>
+                        <span>Plantas List</span></Link>
+                </li>
+
+                {/*<!-- Nav Item - Search -->*/}
+                <li className="nav-item nav-link">
+                <Link className="nav-link" to="/MacetasList">
+                        <i className="fas fa-list"></i>
+                        <span>Macetas List</span></Link>
+                </li>
 
 
                 {/*<!-- Divider -->*/}
@@ -74,6 +89,12 @@ function SideBar(){
                 </Route>
                 <Route path="/UsersList">
                     <UsersList />
+                </Route>
+                <Route path="/PlantasList">
+                    <PlantasList />
+                </Route>
+                <Route path="/MacetasList">
+                    <MacetasList />
                 </Route>
                 <Route component={NotFound} />
             </Switch>
