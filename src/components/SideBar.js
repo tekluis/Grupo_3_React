@@ -1,9 +1,8 @@
 import React from 'react';
 import image from '../assets/images/logo.png';
 import ContentWrapper from './ContentWrapper';
-import GenresInDb from './GenresInDb';
-import LastMovieInDb from './LastProduct';
-import ContentRowMovies from './ContentRowMovies';
+import LastProductInDb from './LastProduct';
+import ContentRowUp from './ContentRowUp';
 import ProductsList from './ProductsList';
 import UsersList from './UsersList';
 import NotFound from './NotFound';
@@ -60,36 +59,15 @@ function SideBar(){
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider d-none d-md-block"/>
             </ul>
-            {/*<!-- End of Sidebar -->*/}
-
-            {/*<!-- Microdesafio 1 -->*/}
-            {/*<!--<Route exact path="/">
-                <ContentWrapper />
-            </Route>
-            <Route path="/GenresInDb">
-                <GenresInDb />
-            </Route>
-            <Route path="/LastMovieInDb">
-                <LastMovieInDb />
-            </Route>
-            <Route path="/ContentRowMovies">
-                <ContentRowMovies />
-            </Route>*/}
-            {/*<!-- End Microdesafio 1 -->*/}
-
-            {/*<!-- End Microdesafio 2 -->*/}
             <Switch>
                 <Route exact path="/">
                     <ContentWrapper />
                 </Route>
-                <Route path="/GenresInDb">
-                    <GenresInDb />
+                <Route path="/LastProductInDb">
+                    <LastProductInDb />
                 </Route>
-                <Route path="/LastMovieInDb">
-                    <LastMovieInDb />
-                </Route>
-                <Route path="/ContentRowMovies">
-                    <ContentRowMovies />
+                <Route path="/ContentRowUP">
+                    <ContentRowUp />
                 </Route>
                 <Route path="/ProductsList">
                     <ProductsList />

@@ -29,7 +29,6 @@ function LastProduct(){
                     <p>{movies.categoria}</p>
                     <p>{movies.tamano}</p>
                     <p>{movies.descuento}</p>
-                    <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">Ver detalle de producto</a>
                 </div>
             </div>
         </div>

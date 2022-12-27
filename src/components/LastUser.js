@@ -28,7 +28,6 @@ function LastUser(){
                     <p>{movies.nombre}</p>
                     <p>{movies.apellido}</p>
                     <p>{movies.email}</p>
-                    <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">Ver detalle del usuario</a>
                 </div>
             </div>
         </div>

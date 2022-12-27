@@ -7,7 +7,7 @@ import SmallCard from './SmallCard';
 
 
 
-function ContentRowMovies(){
+function ContentRowUp(){
 
     const [users,SetUsers] = useState([]);
     const [products,SetProducts] = useState([]);
@@ -73,4 +73,4 @@ function ContentRowMovies(){
     )
 }
 
-export default ContentRowMovies;
+export default ContentRowUp;
