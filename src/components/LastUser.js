@@ -1,4 +1,5 @@
 import React, {useEffect, useState, useRef} from 'react';
+import {Link, Route, Switch} from 'react-router-dom';
 
 
 function LastUser(){
@@ -28,6 +29,7 @@ function LastUser(){
                     <p>{movies.nombre}</p>
                     <p>{movies.apellido}</p>
                     <p>{movies.email}</p>
+                    <Link className="btn btn-danger" to="/UsersList">Todos los usuarios</Link>
                 </div>
             </div>
         </div>

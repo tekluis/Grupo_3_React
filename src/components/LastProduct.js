@@ -1,5 +1,5 @@
 import React, {useEffect, useState, useRef} from 'react';
-import imagenFondo from '../assets/images/mandalorian.jpg';
+import {Link, Route, Switch} from 'react-router-dom';
 
 function LastProduct(){
 
@@ -15,6 +15,7 @@ function LastProduct(){
 
 
     return(
+        <>
         <div className="col-lg-6 mb-4">
             <div className="card shadow mb-4">
                 <div className="card-header py-3">
@@ -29,10 +30,14 @@ function LastProduct(){
                     <p>{movies.categoria}</p>
                     <p>{movies.tamano}</p>
                     <p>{movies.descuento}</p>
+                    <Link className="btn btn-danger" to="/ProductsList">Todos los productos</Link>
                 </div>
             </div>
         </div>
+      </>
+
     )
+
 }
 
 export default LastProduct;
